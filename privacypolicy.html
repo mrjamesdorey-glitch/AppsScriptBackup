@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Pico CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    body { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    h1, h2 { text-align: center; }
+    a { word-break: break-all; }
+  </style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+
+<h2>Introduction</h2>
+<p>The Google Apps Script Backup extension is designed to help you backup your Google Apps Script projects as downloadable ZIP files. We are committed to protecting your privacy and ensuring transparency about how this extension handles your data.</p>
+
+<h2>Non-Affiliation with Google</h2>
+<p>The extension is not a Google product and is not affiliated with or endorsed by Google or the Google Apps Script platform. All modifications to the Google Apps Script website (<a href="https://script.google.com/">https://script.google.com/</a>) are cosmetic, applied locally on your device, and are fully reversible by uninstalling the extension or removing your settings. The extension allows you to backup your projects by fetching content via the Google Apps Script API and creating local ZIP files, while preserving the content you want to see.</p>
+
+<h2>Data Collection and Usage</h2>
+<p>The extension does not collect, store, or transmit any personal data beyond what is required for authentication and backup functionality. The extension operates entirely on your device and uses the following:</p>
+<ul>
+  <li><strong>Local Storage:</strong> The extension uses Chrome’s <code>chrome.storage.sync</code> API to store your backup preferences (e.g., download options, email addresses, custom names) locally on your device and synced across devices. This data is not sent to any external servers.</li>
+  <li><strong>Google OAuth2:</strong> The extension uses Google’s OAuth2 for authentication to access the Apps Script API. Your Google email is fetched once during login for email delivery and stored in memory only.</li>
+  <li><strong>Project Data:</strong> When backing up, the extension fetches your project files via the Apps Script API and creates a local ZIP file. No project data is stored or transmitted beyond the immediate backup process.</li>
+  <li><strong>Email Delivery:</strong> If you choose to email backups, the extension uses the Gmail API to send the ZIP file to the specified email addresses (your Google account or a custom email). The email content is generated locally and sent directly via Google's servers.</li>
+</ul>
+
+<h2>Permissions</h2>
+<p>The extension requires the following permissions to function:</p>
+<ul>
+  <li><strong>identity:</strong> For Google OAuth2 authentication to access Apps Script and Gmail APIs.</li>
+  <li><strong>storage:</strong> To save your backup preferences locally and synced across devices.</li>
+  <li><strong>activeTab, scripting, tabs:</strong> To inject the content script into script.google.com for project detection.</li>
+  <li><strong>Host Permissions:</strong> To access Google APIs for project fetching, email sending, and user info.</li>
+</ul>
+
+<h2>Third-Party Services</h2>
+<p>The extension does not use any third-party services, analytics, or tracking tools. All functionality is self-contained within the extension and Google's APIs.</p>
+
+<h2>Data Security</h2>
+<p>Your project files, settings, and email addresses are stored locally via Chrome's storage API and are as secure as your device. Authentication tokens are cached by Chrome's identity API and revoked on logout. We do not have access to this data, and it is not shared with any external parties beyond Google's APIs for backup and email delivery.</p>
+
+<h2>Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy from time to time to reflect changes in the extension's functionality or legal requirements. The latest version will always be available at this URL. This policy was last updated on November 12, 2025.</p>
+
+</body>
+</html>
